@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="chrome">
+    <span class="chrome-label">Portfolio</span>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#works">Works</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 인물 정보: 내용은 data.js의 profile -->
+    <section id="profile" class="profile"></section>
+
+    <hr class="rule">
+
+    <!-- 작업 목록: 내용은 data.js의 works -->
+    <section id="works" class="works">
+      <div class="section-head">
+        <h2><span class="accent">Works</span><span class="sep">|</span><span>작업 목록</span></h2>
+        <span class="count" id="work-count"></span>
+      </div>
+
+      <div class="tagbar">
+        <div class="tagbar-row">
+          <span class="field-label">태그</span>
+          <div id="tag-list" class="tag-list"></div>
+        </div>
+        <div class="tagbar-row">
+          <span class="field-label">정렬 우선</span>
+          <div id="tag-order" class="tag-order"></div>
+          <button id="tag-clear" class="text-btn" type="button">초기화</button>
+        </div>
+      </div>
+
+      <div id="work-grid" class="work-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot" id="foot"></footer>
+
+
+  <script src="data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
