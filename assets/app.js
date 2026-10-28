@@ -108,7 +108,7 @@
         <article class="work${dim ? " dim" : ""}${has(w.pdf) ? " clickable" : ""}" data-pdf="${esc(w.pdf || "")}">
           ${thumb}
           <div class="body">
-            <div class="meta">${w.no != null ? `<span class="no">#${esc(w.no)}</span>` : ""}${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>
+            <div class="meta">${w.no != null ? `<span class="no"><span class="k">제작 순서</span> ${esc(w.no)}</span>` : ""}${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>
             <h3>${esc(w.title)}</h3>
             ${has(w.summary) ? `<p class="summary">${esc(w.summary)}</p>` : ""}
             ${(w.points || []).length ? `<ul class="points">${w.points.map((q) => `<li>${esc(q)}</li>`).join("")}</ul>` : ""}

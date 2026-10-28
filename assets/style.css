@@ -104,6 +104,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 45px 80px; }
 .work h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.35; }
 .work .summary { margin: 0; font-size: 14px; color: #DDDDDD; }
 .work .meta .no { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; }
+.work .meta .no .k { color: var(--sub); font-weight: 400; }
 .work .meta .status { color: var(--accent); }
 .work .points { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; color: #DDDDDD; }
 .work .points li { padding-left: 14px; position: relative; }
