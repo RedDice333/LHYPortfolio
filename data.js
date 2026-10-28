@@ -36,12 +36,14 @@ window.PORTFOLIO = {
   /*
     작업 목록 — 카드 1장 = 올린 파일 1개
     - pdf: 카드를 누르면 새 탭에서 열리는 PDF · pages: 쪽수
+    - no: 만든 순서 번호 (카드에 #번호로 표시, 큰 번호가 앞)
     - game: 대상 게임 · status: 제작 상태(비우면 숨김)
     - points: 카드에 보이는 줄 (PDF 목차 원문)
     - tags: 태그 바에 자동 수집. 같은 태그는 같은 글자로.
   */
   works: [
     {
+      no: 3,
       title: "궁극기 스킬 개선 제안서",
       game: "명일방주: 엔드필드",
       pdf: "assets/pdf/endfield-combat.pdf",
@@ -56,6 +58,7 @@ window.PORTFOLIO = {
       thumb: "assets/thumbs/endfield-combat.jpg"
     },
     {
+      no: 1,
       title: "시스템 + 밸런스",
       game: "The Division 2",
       pdf: "assets/pdf/division2-system-balance.pdf",
@@ -70,6 +73,7 @@ window.PORTFOLIO = {
       thumb: "assets/thumbs/division2-system-balance.jpg"
     },
     {
+      no: 2,
       title: "엔드필드 포트폴리오",
       game: "명일방주: 엔드필드",
       pdf: "assets/pdf/endfield-wip.pdf",

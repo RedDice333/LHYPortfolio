@@ -39,7 +39,10 @@
   }
 
   /* ---------- 태그 우선 정렬 ---------- */
-  const works = (D.works || []).map((w, i) => ({ ...w, _i: i, tags: w.tags || [] }));
+  // 기본 순서: 만든 순서 번호(no)가 큰 것부터 → 없으면 파일에 적힌 순서
+  const works = (D.works || []).map((w, i) => ({ ...w, tags: w.tags || [], _src: i }))
+    .sort((a, b) => (b.no ?? -Infinity) - (a.no ?? -Infinity) || a._src - b._src)
+    .map((w, i) => ({ ...w, _i: i }));
   let order = []; // 누른 순서 = 우선순위
 
   // 등장 횟수순 태그 목록
@@ -105,7 +108,7 @@
         <article class="work${dim ? " dim" : ""}${has(w.pdf) ? " clickable" : ""}" data-pdf="${esc(w.pdf || "")}">
           ${thumb}
           <div class="body">
-            <div class="meta">${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>
+            <div class="meta">${w.no != null ? `<span class="no">#${esc(w.no)}</span>` : ""}${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>
             <h3>${esc(w.title)}</h3>
             ${has(w.summary) ? `<p class="summary">${esc(w.summary)}</p>` : ""}
             ${(w.points || []).length ? `<ul class="points">${w.points.map((q) => `<li>${esc(q)}</li>`).join("")}</ul>` : ""}
