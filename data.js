@@ -74,7 +74,7 @@ window.PORTFOLIO = {
       game: "명일방주: 엔드필드",
       pdf: "assets/pdf/endfield-wip.pdf",
       pages: "14p",
-      status: "제작 중",
+      status: "폐기",
       points: [
         "오퍼레이터 — 오퍼레이터 시스템 분석",
         "오퍼레이터: 성장 — 성장 시스템 분석 · 성장 시스템 개선 제안 · 성장 콘텐츠 추가 분석"
