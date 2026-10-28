@@ -42,6 +42,20 @@ window.PORTFOLIO = {
   */
   works: [
     {
+      title: "궁극기 스킬 개선 제안서",
+      game: "명일방주: 엔드필드",
+      pdf: "assets/pdf/endfield-combat.pdf",
+      pages: "11p",
+      status: "수정 진행 중",
+      points: [
+        "전투 시스템 분석 — 스킬 4종류 · 일반 공격 · 배틀 스킬 · 연계 스킬 · 궁극기 AS-IS",
+        "전투 시스템 개선 제안 — 궁극기 동시 사용 · 연속 사용 · TO-BE · 언리얼 시연 영상",
+        "부록 — DataTable 전체 명세표"
+      ],
+      tags: ["전투 기획", "언리얼"],
+      thumb: "assets/thumbs/endfield-combat.jpg"
+    },
+    {
       title: "시스템 + 밸런스",
       game: "The Division 2",
       pdf: "assets/pdf/division2-system-balance.pdf",
